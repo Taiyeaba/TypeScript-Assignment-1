@@ -83,3 +83,69 @@ return `Location: ${coordinate[2]}  (${coordinate[0]} ,${coordinate[1]}  )   `;
 
 //solution
 
+const concatenateArrays = <T>(...arrays: T[][]): T[] => {
+const results : T[] = [];
+
+for(const arr of arrays){
+  for(const item of arr){
+    results.push(item);
+  }
+}
+
+return results;
+}
+
+console.log(concatenateArrays(["a", "b"], ["c", "d"]));
+console.log(concatenateArrays([1, 2], [3, 4], [5]));
+
+// function concatenateArrays<T>(...arrays: T[][]): T[] {
+//   return arrays.flat();
+// }
+
+// Problem 5:
+// Define an interface Course with the following properties:
+
+// title (string)
+// students (number)
+// isPublished (boolean)
+
+// Then, create a function getPopularCourses that accepts an array of Course objects and a minStudents number. The function should return a new array containing only the courses where isPublished is true and students is greater than or equal to minStudents.
+
+// Requirements:
+//-- Define the Course interface with the exact property names and types.
+// --Do not mutate the original array.
+
+//solution
+interface Course {
+
+title:string
+students: number
+isPublished:boolean
+}
+
+function getPopularCourses(courses: Course[], minStudents: number): Course[]  {
+    return courses.filter((course) => {
+  if (course.isPublished && course.students >= minStudents) {
+       return true;
+  } else {
+    return false;
+  }
+    });
+
+  }
+
+// const courses: Course[] = [
+//    { title: "TypeScript Mastery", students: 120, isPublished: true },
+//      { title: "Draft Course", students: 200, isPublished: false },
+//   { title: "Basic HTML", students: 45, isPublished: true },
+//   { title: "Next.js Pro", students: 85, isPublished: true }
+// ];
+
+// console.log(getPopularCourses(courses, 80));
+
+// Problem 6:
+// Write a generic function pluckValues that accepts an array of objects (items: T[]) and a valid property key of those objects (key: K), and returns a new array (T[K][]) containing the values of that specific property from each object in the same order.
+
+// Requirements:
+//-- Use generics with the keyof constraint (<T, K extends keyof T>).
+//-- Do not use any.
