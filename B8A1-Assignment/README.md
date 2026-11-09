@@ -14,6 +14,6 @@ All 8 coding problems are completed in the following file:
 
 The following two blog posts are included in this assignment:
 
-1. [Type vs Interface in TypeScript](./type-vs-interface.md)
+1. [Type vs Interface in TypeScript](https://github.com/Taiyeaba/TypeScript-Assignment-1/blob/main/B8A1-Assignment/type-vs-interface.md)
 
-2. [Type Narrowing in TypeScript](./type-narrowing.md)
+2. [Type Narrowing in TypeScript](https://github.com/Taiyeaba/TypeScript-Assignment-1/blob/main/B8A1-Assignment/type-narrowing.md)
